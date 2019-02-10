@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Product.delete_all
+#...
+Product.create!(title: 'Mobile App',
+  description:
+    %{<p>
+      <em> wow app idea </em>
+      this is a mobile app local
+      </p>},
+      image_url: 'ruby.jpg',
+      price: 25.00)
+  #...
