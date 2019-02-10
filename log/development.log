@@ -117,3 +117,139 @@ Processing by SayController#hello as HTML
 Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/say/hello" for 127.0.0.1 at 2019-02-09 17:48:32 -0600
+Processing by SayController#hello as HTML
+  Rendering say/hello.html.erb within layouts/application
+  Rendered say/hello.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 282ms (Views: 273.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/say/goodbye" for 127.0.0.1 at 2019-02-09 17:48:45 -0600
+Processing by SayController#goodbye as HTML
+  Rendering say/goodbye.html.erb within layouts/application
+  Rendered say/goodbye.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/say/hello" for 127.0.0.1 at 2019-02-09 17:53:30 -0600
+Processing by SayController#hello as HTML
+  Rendering say/hello.html.erb within layouts/application
+  Rendered say/hello.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/say/goodbye" for 127.0.0.1 at 2019-02-09 17:53:33 -0600
+Processing by SayController#goodbye as HTML
+  Rendering say/goodbye.html.erb within layouts/application
+  Rendered say/goodbye.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/say/hello" for 127.0.0.1 at 2019-02-09 17:53:34 -0600
+Processing by SayController#hello as HTML
+  Rendering say/hello.html.erb within layouts/application
+  Rendered say/hello.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 56ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/say/goodbye" for 127.0.0.1 at 2019-02-09 17:53:34 -0600
+Processing by SayController#goodbye as HTML
+  Rendering say/goodbye.html.erb within layouts/application
+  Rendered say/goodbye.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/say/hello" for 127.0.0.1 at 2019-02-09 17:53:35 -0600
+Processing by SayController#hello as HTML
+  Rendering say/hello.html.erb within layouts/application
+  Rendered say/hello.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/say/goodbye" for 127.0.0.1 at 2019-02-09 17:53:35 -0600
+Processing by SayController#goodbye as HTML
+  Rendering say/goodbye.html.erb within layouts/application
+  Rendered say/goodbye.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/say/hello" for 127.0.0.1 at 2019-02-09 17:56:44 -0600
+Processing by SayController#hello as HTML
+  Rendering say/hello.html.erb within layouts/application
+  Rendered say/hello.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/say/goodbye" for 127.0.0.1 at 2019-02-09 17:56:46 -0600
+Processing by SayController#goodbye as HTML
+  Rendering say/goodbye.html.erb within layouts/application
+  Rendered say/goodbye.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/say/hello" for 127.0.0.1 at 2019-02-09 17:56:47 -0600
+Processing by SayController#hello as HTML
+  Rendering say/hello.html.erb within layouts/application
+  Rendered say/hello.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/say/hello" for 127.0.0.1 at 2019-02-09 17:58:55 -0600
+Processing by SayController#hello as HTML
+  Rendering say/hello.html.erb within layouts/application
+  Rendered say/hello.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/say/goodbye" for 127.0.0.1 at 2019-02-09 17:58:57 -0600
+Processing by SayController#goodbye as HTML
+  Rendering say/goodbye.html.erb within layouts/application
+  Rendered say/goodbye.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/jiayuhuang/jiayu-depot-app-repo/app/views/say/goodbye.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+...pend=(​ link_to ​"Hello"​, say_hello_path ​);@output...
+...                            ^~~
+/Users/jiayuhuang/jiayu-depot-app-repo/app/views/say/goodbye.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+...​"Hello"​, say_hello_path ​);@output_buffer.safe_append=...
+...                              ^~~):
+  
+app/views/say/goodbye.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/say/goodbye.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting do or '{' or '('
+Started GET "/say/goodbye" for 127.0.0.1 at 2019-02-09 17:59:41 -0600
+Processing by SayController#goodbye as HTML
+  Rendering say/goodbye.html.erb within layouts/application
+  Rendered say/goodbye.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/say/hello" for 127.0.0.1 at 2019-02-09 17:59:43 -0600
+Processing by SayController#hello as HTML
+  Rendering say/hello.html.erb within layouts/application
+  Rendered say/hello.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/say/goodbye" for 127.0.0.1 at 2019-02-09 17:59:44 -0600
+Processing by SayController#goodbye as HTML
+  Rendering say/goodbye.html.erb within layouts/application
+  Rendered say/goodbye.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/say/hello" for 127.0.0.1 at 2019-02-09 17:59:45 -0600
+Processing by SayController#hello as HTML
+  Rendering say/hello.html.erb within layouts/application
+  Rendered say/hello.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/say/goodbye" for 127.0.0.1 at 2019-02-09 17:59:46 -0600
+Processing by SayController#goodbye as HTML
+  Rendering say/goodbye.html.erb within layouts/application
+  Rendered say/goodbye.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.0ms)
+
+
