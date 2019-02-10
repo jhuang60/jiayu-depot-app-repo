@@ -17,3 +17,42 @@ Product.create!(title: 'Mobile App',
       image_url: 'ruby.jpg',
       price: 25.00)
   #...
+Product.create!(title: 'Me at this point',
+  description:
+    %{<p>
+       ruby ruby on rails everywhere
+      </p>},
+      image_url: 'everywhere.png',
+      price: 30.00)
+
+Product.create!(title: 'ruby on rails?',
+  description:
+    %{<p>
+      false! and learn why!
+    </p>},
+    image_url: 'false.jpg',
+    price: 20.00)
+
+Product.create!(title: 'Ruby is not a person',
+  description:
+    %{<p>
+      how explain that to anyone who doesn't code
+    </p>},
+    image_url: 'god.jpg',
+    price: 60.00)
+
+Product.create!(title: 'first commit',
+  description:
+    %{<p>
+      this is getting serious
+    </p>},
+    image_url: 'serious.png',
+    price: 29.99)
+
+Product.create!(title: 'Me right now',
+  description:
+    %{<p>
+      woah! a whole new world
+    </p>},
+    image_url: 'woah.jpg ',
+    price: 1999999999999.99)

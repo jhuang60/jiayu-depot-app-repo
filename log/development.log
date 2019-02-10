@@ -1038,3 +1038,313 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 82ms (Views: 80.5ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/products/new" for 127.0.0.1 at 2019-02-09 21:30:29 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jiayuhuang/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (11.0ms)
+  Rendered products/new.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 445ms (Views: 428.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2019-02-09 21:31:36 -0600
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yLY11TqZ7IvsxP9VRZpd1rqs8zSb5TZW4PcJRnDAbn7/AYAUifgTqExQV9GE7RpsWMgUySseH5h9jJAzuva5Gg==", "product"=>{"title"=>"Me at this point", "description"=>"ruby ruby on rails everywhere", "image_url"=>"everywhere.png", "price"=>"30"}, "commit"=>"Create Product"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:30
+  [1m[36mProduct Create (0.9ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Me at this point"], ["description", "ruby ruby on rails everywhere"], ["image_url", "everywhere.png"], ["price", 30.0], ["created_at", "2019-02-10 03:31:36.765224"], ["updated_at", "2019-02-10 03:31:36.765224"]]
+  ↳ app/controllers/products_controller.rb:30
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:30
+Redirected to http://localhost:3000/products/3
+Completed 302 Found in 19ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/products/3" for 127.0.0.1 at 2019-02-09 21:31:36 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 40ms (Views: 31.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-02-09 21:31:39 -0600
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 41ms (Views: 38.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2019-02-09 21:31:43 -0600
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.3ms)
+  Rendered products/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2019-02-09 21:32:20 -0600
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EFo0p9UM5kzSyrK2/nhXkaCOXFyx9NTKCzL73pRH9A4n7YFmZm0Zb3JeGjI/DxArQuq7oQEP/QSWSWKrXnEjag==", "product"=>{"title"=>"ruby on rails?", "description"=>"false! and learn why!", "image_url"=>"false.jpg", "price"=>"20"}, "commit"=>"Create Product"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:30
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "ruby on rails?"], ["description", "false! and learn why!"], ["image_url", "false.jpg"], ["price", 20.0], ["created_at", "2019-02-10 03:32:20.178228"], ["updated_at", "2019-02-10 03:32:20.178228"]]
+  ↳ app/controllers/products_controller.rb:30
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:30
+Redirected to http://localhost:3000/products/4
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/products/4" for 127.0.0.1 at 2019-02-09 21:32:20 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-02-09 21:32:21 -0600
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 52ms (Views: 49.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2019-02-09 21:32:24 -0600
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.9ms)
+  Rendered products/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2019-02-09 21:33:13 -0600
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E5Vo1bDrg0tpe0J9jp+0JfD2M/YbAa+L6zKw1Z+ix9kkIt0UA4p8aMnv6vlP6POfEpLUC6v6hkV2SSmgVZQQvQ==", "product"=>{"title"=>"Ruby is not a person", "description"=>"how explain that to anyone who doesn't code", "image_url"=>"god.jpg", "price"=>"60"}, "commit"=>"Create Product"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:30
+  [1m[36mProduct Create (0.7ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Ruby is not a person"], ["description", "how explain that to anyone who doesn't code"], ["image_url", "god.jpg"], ["price", 60.0], ["created_at", "2019-02-10 03:33:13.850822"], ["updated_at", "2019-02-10 03:33:13.850822"]]
+  ↳ app/controllers/products_controller.rb:30
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:30
+Redirected to http://localhost:3000/products/5
+Completed 302 Found in 8ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/products/5" for 127.0.0.1 at 2019-02-09 21:33:13 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-02-09 21:33:15 -0600
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2019-02-09 21:33:17 -0600
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (2.6ms)
+  Rendered products/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2019-02-09 21:34:18 -0600
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YXxeHtNN+NRTiI5BRpd7CJcvYJT3pILC9GtW6QaNKYNWy+vfYCwH9/McJsWH4DyydUuHaUdfqwxpEM+czLv+5w==", "product"=>{"title"=>"first commit", "description"=>"this is getting serious", "image_url"=>"serious.png", "price"=>"29.99"}, "commit"=>"Create Product"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:30
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "first commit"], ["description", "this is getting serious"], ["image_url", "serious.png"], ["price", 29.99], ["created_at", "2019-02-10 03:34:18.449759"], ["updated_at", "2019-02-10 03:34:18.449759"]]
+  ↳ app/controllers/products_controller.rb:30
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:30
+Redirected to http://localhost:3000/products/6
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/products/6" for 127.0.0.1 at 2019-02-09 21:34:18 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 28ms (Views: 23.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-02-09 21:34:20 -0600
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 53ms (Views: 51.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2019-02-09 21:34:22 -0600
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (3.8ms)
+  Rendered products/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2019-02-09 21:35:09 -0600
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qj9Fr7w+LITfM9Vy3lr833GqscWQKLlhu5Pyz4Y5o8t1iPBuD1/Tp3+nffYfLbtlk85WOCDTkK8m6Gu6TA90rw==", "product"=>{"title"=>"Me right now", "description"=>"woah! a whole new world", "image_url"=>"woah.jpg", "price"=>"1000000.00"}, "commit"=>"Create Product"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:30
+  [1m[36mProduct Create (0.9ms)[0m  [1m[32mINSERT INTO "products" ("title", "description", "image_url", "price", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Me right now"], ["description", "woah! a whole new world"], ["image_url", "woah.jpg"], ["price", 1000000.0], ["created_at", "2019-02-10 03:35:09.776832"], ["updated_at", "2019-02-10 03:35:09.776832"]]
+  ↳ app/controllers/products_controller.rb:30
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:30
+Redirected to http://localhost:3000/products/7
+Completed 302 Found in 11ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/products/7" for 127.0.0.1 at 2019-02-09 21:35:09 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-02-09 21:35:12 -0600
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 47ms (Views: 45.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/3" for 127.0.0.1 at 2019-02-09 21:36:39 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 52ms (Views: 50.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products/4" for 127.0.0.1 at 2019-02-09 21:38:49 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 40ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-02-09 21:38:52 -0600
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 79ms (Views: 76.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products/5" for 127.0.0.1 at 2019-02-09 21:40:12 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 59ms (Views: 55.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-02-09 21:40:14 -0600
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (35.5ms)
+Completed 200 OK in 96ms (Views: 89.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/6" for 127.0.0.1 at 2019-02-09 21:41:09 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-02-09 21:41:23 -0600
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 47ms (Views: 45.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/7" for 127.0.0.1 at 2019-02-09 21:42:02 -0600
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:67
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-02-09 21:42:31 -0600
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-02-09 21:42:48 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jiayuhuang/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (259.2ms)
+Completed 200 OK in 324ms (Views: 310.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-02-09 21:49:11 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jiayuhuang/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (260.7ms)
+Completed 200 OK in 317ms (Views: 306.4ms | ActiveRecord: 0.7ms)
+
+
