@@ -1010,3 +1010,31 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 59ms (Views: 58.3ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/products" for 127.0.0.1 at 2019-02-09 21:17:50 -0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/jiayuhuang/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (218.0ms)
+Completed 200 OK in 283ms (Views: 270.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2019-02-09 21:17:53 -0600
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (18.7ms)
+  Rendered products/new.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 51ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-02-09 21:18:07 -0600
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:17
+  Rendered products/index.html.erb within layouts/application (57.7ms)
+Completed 200 OK in 82ms (Views: 80.5ms | ActiveRecord: 0.3ms)
+
+
