@@ -3,13 +3,13 @@
 one:
   title: MyString
   description: MyText
-  image_url: MyString
+  image_url: logo.png
   price: 9.99
 
 two:
   title: MyString
   description: MyText
-  image_url: MyString
+  image_url: logo.png
   price: 9.99
 
 ruby:
@@ -19,4 +19,4 @@ ruby:
     If you need to get working programs delivered fast, you should add Ruby to
     your toolbox.
   price: 49.50
-  image_url: ruby.jpg
+  image_url: logo.png
